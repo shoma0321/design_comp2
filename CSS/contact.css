@@ -1,0 +1,364 @@
+@charset 'utf-8';
+
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+  letter-spacing: 0.05em;
+  color: #171717;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
+}
+img {
+  width: 100%;
+  vertical-align: bottom;
+}
+
+.link-btn {
+  margin: 0 auto;
+  font-size: 13px;
+  font-family: Montserrat Medium;
+  display: block;
+  width: 160px;
+  line-height: 36px;
+  background-color: #000000;
+  text-align: center;
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+  margin-bottom: 120px;
+}
+.link-btn:hover {
+  opacity: 0.7;
+  transition: 0.3s;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+.header__flex {
+  display: flex;
+  height: 60px;
+  align-items: center;
+  position: absolute;
+  top: 30px;
+  left: 58px;
+  z-index: 20;
+}
+
+.symbol-width {
+  width: 70px;
+  height: 45px;
+  margin: auto;
+  margin-top: 130px;
+}
+
+.symbol-width a:hover {
+  opacity: 0.5;
+}
+/*============
+nav
+=============*/
+nav {
+  display: block;
+  position: fixed;
+  top: 0;
+  right: -500px;
+  bottom: 0;
+  width: 500px;
+  background: rgb(34, 34, 34, 95%);
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  transition: all 0.5s;
+  z-index: 3;
+  opacity: 0;
+}
+.open nav {
+  right: 0;
+  opacity: 1;
+}
+nav .inner {
+  padding: 25px;
+}
+nav .inner ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-top: 50px;
+}
+nav .inner ul li {
+  position: relative;
+  margin: 0;
+  font-family: Montserrat;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+nav .inner ul li a {
+  display: block;
+  color: #fff;
+  font-size: 14px;
+  padding: 1em;
+  text-decoration: none;
+  transition-duration: 0.2s;
+}
+nav .inner ul li a:hover {
+  opacity: 0.5;
+}
+
+/*============
+.toggle_btn
+=============*/
+.toggle_btn {
+  display: block;
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  width: 30px;
+  height: 30px;
+  transition: all 0.5s;
+  cursor: pointer;
+  z-index: 3;
+}
+.toggle_btn span {
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  background-color: #fff;
+  border-radius: 4px;
+  transition: all 0.5s;
+}
+.toggle_btn span:nth-child(1) {
+  top: 4px;
+}
+.toggle_btn span:nth-child(2) {
+  top: 14px;
+}
+.toggle_btn span:nth-child(3) {
+  bottom: 4px;
+}
+.open .toggle_btn span {
+  background-color: #fff;
+}
+.open .toggle_btn span:nth-child(1) {
+  -webkit-transform: translateY(10px) rotate(-315deg);
+  transform: translateY(10px) rotate(-315deg);
+}
+.open .toggle_btn span:nth-child(2) {
+  opacity: 0;
+}
+.open .toggle_btn span:nth-child(3) {
+  -webkit-transform: translateY(-10px) rotate(315deg);
+  transform: translateY(-10px) rotate(315deg);
+}
+/*============
+#mask
+=============*/
+#mask {
+  display: none;
+  transition: all 0.5s;
+}
+.open #mask {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(34, 34, 34, 60%);
+  opacity: 0.8;
+  z-index: 2;
+  cursor: pointer;
+}
+/*-------------------------fv-------------------------*/
+
+.fv {
+  width: 100%;
+  height: 451px;
+  background: linear-gradient(
+    to right,
+    #ffffff 0%,
+    #ffffff 50%,
+    #222222 50%,
+    #222222 100%
+  );
+  position: relative;
+}
+
+.kv-wrapper {
+  width: 1100px;
+  height: 387px;
+  background-image: url(../images/heading-img_contact.jpg);
+  background-repeat: no-repeat;
+}
+
+.main-copy {
+  position: absolute;
+  top: 156px;
+  left: 894px;
+}
+
+.en-copy {
+  font-family: Montserrat;
+  font-size: 72px;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.en-main-copy {
+  font-family: YuGothic;
+  font-size: 20px;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.contact-wrapper {
+  margin: 0 auto;
+  text-align: center;
+  align-items: center;
+}
+
+/*----------------------------------//fv------------------*/
+
+/*------------------------------main------------------------------------------*/
+label {
+  margin-right: 50px;
+}
+
+.contact-text {
+  margin: 120px 320px 52px;
+  font-family: Noto Sans JP;
+  font-size: 16px;
+}
+
+.contact-box {
+  margin: 42px 320px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.contact-list {
+  display: flex;
+}
+
+.contact-title {
+  font-family: Noto Sans JP Bold;
+  font-size: 16px;
+  margin-bottom: 10px;
+  display: flex;
+}
+
+.contact-btn {
+  font-size: 12px;
+  font-family: Noto Sans JP Bold;
+  display: block;
+  width: 26px;
+  height: 16px;
+  background-color: #000000;
+  color: #ffffff;
+  display: flex;
+  padding: 1px 5px;
+  margin-left: 16px;
+}
+
+.contact-height {
+  height: 41px;
+  outline: 1px #333333 solid;
+}
+
+.contact-outline {
+  outline: 1px #333333 solid;
+  height: 212px;
+}
+.contact-outline2 {
+  outline: 1px #333333 solid;
+  height: 212px;
+  overflow: scroll;
+}
+
+.contact-wide {
+  margin-left: 10px;
+}
+
+.contact-check {
+  margin: 0 auto;
+  margin-bottom: 41px;
+}
+input[type="checkbox"] {
+  transform: scale(1.5);
+  margin-right: 10px;
+}
+
+.contact {
+  position: relative;
+  cursor: pointer;
+  padding-left: 30px;
+}
+
+.contact::before,
+.contact::after {
+  content: "";
+  display: block;
+  border-radius: 50%;
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+}
+
+.contact::before {
+  background-color: #fff;
+  border: 1px solid #000;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  left: 5px;
+}
+
+.contact::after {
+  background-color: #000;
+  border-radius: 50%;
+  opacity: 0;
+  width: 16px;
+  height: 16px;
+  left: 7px;
+}
+.visually-hidden:checked + .contact::after {
+  opacity: 1;
+}
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  overflow: hidden;
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+}
+/*---------------------------------//main--------------------------------------*/
+
+/*-------------------------footer-----------------------------------------*/
+
+footer {
+  text-align: center;
+  background-color: #525252;
+  color: #ffffff;
+  font-size: 10px;
+  font-family: YuGothic;
+  height: 40px;
+}
+
+/*-------------------------//footer----------------------------------------*/
